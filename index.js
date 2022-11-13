@@ -1,5 +1,7 @@
 
    
+
+   
 function principal(){
     let principal = prompt("Enter Principal Amount");
     console.log(principal);
@@ -8,6 +10,10 @@ function principal(){
     let rate = prompt("Enter Rate");
     console.log(rate + "%");
     let amount = principal*((1+rate/100)**timeoryear);
-    console.log("amount = " + amount);
-    window.alert("amount = " + amount);
-}
+    let ci = amount - principal;
+    console.log("C.I = " + ci);
+    window.alert("C.I = " + ci);
+    document.getElementById("principal").innerHTML = "Principal = " + principal;
+    document.getElementById("time").innerHTML = "Time/Year = " + timeoryear;
+    document.getElementById("rate").innerHTML = "Rate = " + rate + "%";
+}   
